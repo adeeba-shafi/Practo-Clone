@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practo</title>
+</head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .one{
+        display: flex;
+        height: 12vh;
+        border-bottom:solid rgb(179, 175, 175) 1px;
+    }
+    
+    .oneb1{
+        flex:2;
+       
+        font-size: 1.9rem;
+        color: rgb(4, 4, 139);
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 12vh;
+        text-align: center;
+    }
+    .oneb2{
+        display: flex;
+        flex:9;
+        
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 12vh;
+        text-align: center;
+        justify-content: space-between;
+    }
+    .oneb2 div a{
+        text-decoration: none ;
+        color: black;
+        font-weight: bold;
+        letter-spacing: -0.3px;
+    }
+    .b{
+        font-size: 0.85rem;
+    }
+    .drop{
+        display: none;
+        position: absolute;
+           z-index: 1;
+           box-shadow: 1px 1px 9px rgba(176, 176, 176, 0.5);
+    }
+    #click{
+        display: none;
+        cursor: pointer;
+    }
+    #click:checked+.drop{
+        display: block;
+    }
+    .drop li{
+        list-style: none;
+            color: black;
+            font-size: 0.9rem;
+            height: 9vh;
+            line-height:9vh;
+            width: 16vw;
+            background-color: white;
+            text-align: left;
+            padding-left: 20px;
+    }
+    .drop li:hover{
+            background-color:#f1f1fc;
+            cursor: pointer;
+        }
+        .ham{
+            cursor: pointer;
+        }
+
+
+        .drop2{
+            display: none;
+            position: absolute;
+           z-index: 1;
+           box-shadow: 1px 1px 9px rgba(176, 176, 176, 0.5);
+        }
+        #click2{
+            display: none;
+        }
+        #click2:checked+.drop2{
+            display: block;
+        }
+        .drop2 li{
+            list-style: none;
+            color: black;
+            font-size: 0.9rem;
+            height: 9vh;
+            line-height:9vh;
+            width: 16vw;
+            background-color: white;
+            text-align: left;
+            padding-left: 20px;
+           
+
+        }
+        .drop2 li:hover{
+            background-color:#f1f1fc;
+            cursor: pointer;
+        }
+        .ham2{
+            cursor: pointer;
+        }
+
+        .drop3{
+             display: none;
+            position: absolute;
+           z-index: 1;
+           box-shadow: 1px 1px 9px rgba(176, 176, 176, 0.5);
+        }
+        #click3{
+            display: none;
+        }
+        #click3:checked+.drop3{
+            display: block;
+        }
+        .drop3 li{
+            list-style: none;
+            color: black;
+            font-size: 0.9rem;
+            height: 9vh;
+            line-height:9vh;
+            width: 16vw;
+            background-color: white;
+            text-align: left;
+            padding-left: 20px;
+
+         }
+        .drop3 li:hover{
+            background-color:#f1f1fc;
+            cursor: pointer;
+            }
+        .ham3{
+            cursor: pointer;
+        }
+
+
+    .fa-solid{
+        font-size: 0.7rem;
+    }
+    .oneb3{
+        flex:1.8;
+        
+    }
+    .boxb3{
+        border: solid gray 1px;
+        border-radius: 2px;
+        width: 5.5rem;
+        height: 4.5vh;
+        text-align: center;
+        line-height: 4.5vh;
+        font-size: 0.8rem;
+        margin: auto;
+        margin-top: 19px;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+
+
+
+
+
+    .three{
+        /* background: url(chronic_consumer_banner_dweb.png);
+        background-repeat: no-repeat;
+        background-size: contain; */
+        width: 100%;
+        height: 57.5vh;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        margin-top: 7.5rem;
+        cursor: pointer;
+    }
+    .three img{
+        width: 92vw;
+        height: 57vh;
+        margin: auto;
+    }
+
+    .four{
+        /* background-color: navy; */
+        display: flex;
+        justify-content: space-evenly;
+        height: 55vh;
+        margin-top: 4rem;
+    }
+  .innerfour{
+    width:16vw;
+  }
+    
+
+    .t1{
+        width: 16vw;
+        height: 19vh;
+        border-radius: 0px 0px 25px 25px;
+        border: solid gray 0px;
+        border-top: 0px;
+        box-shadow: 1px 1px 9px rgba(176, 176, 176, 0.5);
+    }
+
+    .f1{
+        background-color: #AFCFED;
+        width: 16vw;
+        height: 30vh;
+        border-radius: 25px 25px 0px 0px;
+    }
+    
+
+    .f2{
+        background-color: #98CBD6;
+        width: 16vw;
+        height: 30vh;
+        border-radius: 25px 25px 0px 0px;
+    }
+    
+    .f3{
+        background-color: #CCD0DB;
+        width: 16vw;
+        height: 30vh;
+        border-radius: 25px 25px 0px 0px;
+    }
+    .f4{
+        background-color: #AFCFED;
+        width: 16vw;
+        height: 30vh;
+        border-radius: 25px 25px 0px 0px;
+    }
+    .f5{
+        background-color: #D5D8FC;
+        width: 16vw;
+        height: 30vh;
+        border-radius: 25px 25px 0px 0px;
+    }
+    .img1{
+        width: 10.5vw;
+        margin-top: 12px;
+       margin-left: 2.8vw;
+       height: 28vh;
+    }
+    .img2{
+        width: 13vw;
+        margin-top: 1px;
+       margin-left: 1.5vw;
+       height: 30vh;
+      
+    }
+    .img3{
+        width: 14vw;
+        margin-left: 1vw;
+       
+       height: 30vh;
+    }
+    .img4{
+        width: 15vw;
+        margin-left: 2vw;
+       
+       height: 30vh;
+    }
+    .img5{
+        width: 13vw;
+        margin-left: 1.4vw;
+        margin-top: 19px;
+       height: 27vh;
+    }
+
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.13rem;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top: 20px;
+   
+}
+.text1{
+    font-family:  Lato,Helvetica,Arial,sans-serif;
+    color: gray;
+    font-weight: 400;
+    font-size: 0.9rem;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+
+    .five{
+        height: 55vh;
+        margin-top: 4rem;
+    }
+
+    .box1{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .mark1{
+        font-family: Lato,Helvetica,Arial,sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #414146;
+        padding-left: 40px;
+    }
+    .mark2{
+        font-family: Lato,Helvetica,Arial,sans-serif;
+        font-size: 0.9rem;
+        color: #414146;
+        padding-left: 40px;
+        padding-top: 10px;
+    }
+    .mark3{
+        font-size: 14px;
+        color: #14bef0;
+        font-weight: 400;
+        padding: 12px 16px;
+        border: 1.5px solid #14bef0;
+        background-color: #fff;
+        border-radius: 5px;
+        margin-right: 50px;
+    }
+    .box2{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 50px;
+    }
+    .card{
+        width: 11vw;
+        height: 35vh;
+    }
+    .cardimg{
+        width: 9.2vw;
+        height: 20vh;
+        margin-left: 13px;
+    }
+    .text2{
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-top: 10px;
+        text-align: center;
+        font-family: Lato,Helvetica,Arial,sans-serif
+    }
+    .text3{
+        font-size: 0.8rem;
+        color: #14bef0;
+        margin-top: 10px;
+        font-weight: 550;
+        text-align: center;
+        font-family: Lato,Helvetica,Arial,sans-serif
+    }
+    
+
+
+
+    .six{
+        height: 65vh;
+        width: 95vw;
+        margin: auto;
+        margin-top: 25px;
+        
+    }
+    .sixbox1{
+        padding-top: 25px;
+    }
+    .mark4{
+        font-family: Lato,Helvetica,Arial,sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #414146;
+        padding-left: 20px;
+    }
+    .mark5{
+        font-family: Lato,Helvetica,Arial,sans-serif;
+        font-size: 0.9rem;
+        color: #414146;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+    .sixbox2{
+       
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 20px;
+        
+    }
+    .card2{
+        
+        height: 45vh;
+        width: 22vw;
+        cursor: pointer;
+    }
+    .card2 div:hover .text4{
+        color: rgb(41, 178, 232);
+    }
+    .cardimg2{
+        width: 22vw;
+        border-radius: 5px;
+        
+    }
+    .text4{
+        font-family: Lato,Helvetica,Arial,sans-serif;
+        margin-top: 9px;
+        font-weight: 600;
+        color: #414146;
+    }
+
+    .text5{
+        font-family: Lato,Helvetica,Arial,sans-serif;
+        color: #414146;
+        font-size: 0.85rem;
+        margin-top: 3px;
+    }
+
+
+
+    .seven{
+        
+        height: 75vh;
+        width: 92vw;
+        margin: auto;
+        margin-top: 17px;
+        border-bottom:1px solid #dfdfe5;
+        border-top:1px solid #dfdfe5;
+
+       
+    }
+    .seveninside{
+        width: 80vw;
+        height: 55vh;
+        display: flex;
+        justify-content: space-evenly;
+        margin: auto;
+        padding: 50px;
+        
+
+    }
+    .seventext{
+        width:29vw;
+        height: 50vh;
+       
+    }
+    .sevenbox{
+        width:22vw;
+        height: 55vh;
+       cursor: pointer;
+       
+    }
+    
+
+
+    .texts1{
+        font-family: Lato,Helvetica,Arial,sans-serif;
+        font-weight: 600;
+        font-size: 1.7rem;
+        color: #414146;
+        padding-left: 20px;
+        padding-top: 20px;
+        
+    }
+    .texts2{
+        font-family: Lato,Helvetica,Arial,sans-serif;
+        font-size: 0.9rem;
+        color: #414146;
+        padding-left: 20px;
+        padding-top: 6px;
+        
+    }
+    
+.butt{
+    padding: 15px 30px;
+    background-color: #14bef0;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    border: 0px;
+    margin-left: 20px;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+
+.cardimg3{
+        width: 22vw;
+        border-radius: 5px;
+        height: 33vh;
+        
+    }
+    .text6{
+        color: #358588;
+        font-family: Lato,Helvetica,Arial,sans-serif;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+    .text7{
+        color: #414146;
+        font-size: 1rem;
+        font-family: Lato,Helvetica,Arial,sans-serif;
+        font-weight: bold;
+        line-height: 3.7vh;
+        margin-top: 6px;
+    }
+    .text8{
+        color: #414146;
+        font-size: 0.9rem;
+        font-family: Lato,Helvetica,Arial,sans-serif;
+        margin-top: 10px;
+    }
+
+
+    .outernine{
+       
+        width: 100%;
+        height: 90vh;
+       background-color: #f8f8fb;
+       margin-top: 40px;
+
+    }
+    
+    .nine{
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        width: 70vw;
+        height: 62vh;
+        margin-top: 30px;
+        
+        
+    }
+    .nineimg{
+        width: 333px;
+        height: 370px;
+      
+    }
+    .ninebox{
+        width: 35vw;
+    }
+    .textn1{
+        font-size: 1.8rem;
+        font-family: Lato,Helvetica,Arial,sans-serif;
+        color: #414146;
+        padding-left: 10px;
+        margin-top: 50px;
+    }
+    .textn2{
+        font-size: 0.85rem;
+        font-family: Lato,Helvetica,Arial,sans-serif;
+        color: #414146;
+        padding-left: 10px;
+        margin-top: 25px;
+    }
+    .textn3{
+        font-family: Lato,Helvetica,Arial,sans-serif;
+        color: #414146;
+        padding-left: 10px;
+        margin-top: 60px;
+    }
+    .num{
+        display: flex;
+        
+    }
+    .number{
+        display: flex;
+        justify-content: space-evenly;
+        
+        margin-top: 8px;
+        width: 32vw;
+    }
+    .given{
+        border: solid gray 1px;
+        background-color: white;
+        width: 4vw;
+        height: 7vh;
+        line-height: 7vh;
+        text-align: center;
+        border-radius: 3px 0px 0px 3px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        
+    }
+    .tel{
+        width: 14vw;
+        height: 7vh;
+        line-height: 7vh;
+        padding-left: 15px;
+        border: solid gray 1px;
+        border-left: 0px;
+        border-radius: 0px 3px 3px 0px;
+
+    }
+.butt2{
+    padding: 15px 30px;
+    background-color: #14bef0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    border: 0;
+    border-radius: 3px;
+}
+
+
+    .ten{
+        background-color: #28328c;
+        height: 90vh;
+        margin: auto;
+    }
+    .innerten{
+        height: 65vh;
+        width: 97vw;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        font-family: Lato,Helvetica,Arial,sans-serif;
+        color: white;
+    }
+    .it1{
+        width: 14vw;
+        height: 50vh;
+        margin-top: 55px;
+    }
+    .it2{
+        width: 10vw;
+        height: 50vh;
+        margin-top: 55px;
+
+    }
+    .innerten li{
+        list-style: none;
+        cursor: pointer;
+        
+    }
+    .innerten li a{
+        text-decoration: none;
+        color: white;
+        font-size: 0.9rem;
+    }
+    .innerten li:hover a{
+        cursor: pointer;
+        text-decoration:underline;
+    }
+    .inn1{
+        margin-top: 20px;
+    }
+    .inn{
+        margin-top: 6px;
+    }
+    .innerten2{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .innerten3{
+        font-family: Lato,Helvetica,Arial,sans-serif;
+        color: #b8bbd9;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+
+
+    @media(max-width:650px){
+        .oneb2{
+            display: none;
+        }
+        .three{
+        width: 95vw;
+        height: 50vh;
+        margin-top: 3rem;
+    }
+.three img{
+    width: 90vw;
+    height: 45.5vh;
+}
+        .four{
+            flex-direction: column;
+            height: 400vh;
+        }
+        .innerfour{
+            width:50vw;
+            height: 75vh;
+            margin: auto;
+        }
+        .img1{
+            width: 39vw;
+            margin-top: 30px;
+            margin-left: 6vw;
+            height: 40vh;
+        }
+        .f1{
+        width: 50vw;
+        height: 45.85vh;
+        }
+        .t1{
+        width: 50vw;
+        height: 20vh;
+        
+    }
+    .img2{
+        width: 45vw;
+        margin-top: 1px;
+       margin-left: 5vw;
+       height: 45vh;
+      
+    }
+    .f2{
+        width: 50vw;
+        height: 45vh;
+    }
+
+    .img3{
+        width: 45vw;
+        margin-left: 14px;
+        height: 45vh;
+    }
+    
+    .f3{
+        width: 50vw;
+        height: 45vh;
+    }
+
+    .img4{
+        width: 45vw;
+        margin-left: 9vw;
+       height: 45vh;
+    }
+    .f4{
+        width:50vw;
+        height: 45vh;
+    }
+
+    .img5{
+        width: 42vw;
+        margin-left: 2vw;
+        margin-top: 30px;
+       height: 39vh;
+    }
+    .f5{
+        width: 50vw;
+        height: 45vh;
+    }
+
+
+
+    .five{
+        height: 400vh;
+    }
+    
+    .box2{
+        flex-direction: column;
+        margin-top: 50px;
+        height: 360vh;
+        
+    }
+    .card{
+        width: 40vw;
+        height: 50vh;
+        margin: auto;
+    }
+    .cardimg{
+        width: 35vw;
+        height: 35vh;
+    }
+    .text2{
+        font-size: 1rem;
+    }
+    .text3{
+        font-size: 1rem;
+    }
+
+
+
+    .six{
+        height: 307vh;
+        width: 95vw;
+        margin: auto;
+        margin-top: 25px;
+        
+    }
+    
+    .sixbox2{
+        flex-direction: column;
+        margin-top: 30px;
+        height: 270vh;
+        
+    }
+    .card2{
+        height: 65vh;
+        width: 53vw;
+        cursor: pointer;
+        margin: auto;
+    }
+    /* .card2 div:hover .text4{
+        color: rgb(41, 178, 232);
+    } */
+    .cardimg2{
+        width: 53vw;
+    }
+    .text4{
+        font-size: 1.3rem;
+    }
+
+    .text5{
+        font-size: 1rem;
+    }
+
+
+
+
+
+    .seven{
+        height: 225vh;
+        width: 92vw;
+        margin: auto;
+    }
+    .seveninside{
+        width: 70vw;
+        height: 200vh;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .seventext{
+        width:75vw;
+        height: 55vh;
+    }
+    .sevenbox{
+        width:60vw;
+        height: 66vh;
+    }
+    
+
+
+    
+.cardimg3{
+        width: 60vw;
+        height: 36vh;
+        
+    }
+    .text6{
+        margin-top: 10px;
+        font-size: 1.1rem;
+    }
+    .text7{
+        font-size: 1.06rem;
+    }
+    .text8{
+        font-size: 1rem;
+    }
+
+
+
+
+
+
+
+
+
+
+    .outernine{
+       height: 190vh;
+   }
+   
+   .nine{
+       justify-content: space-evenly;
+       align-items: center;
+     flex-direction: column;
+       width: 80vw;
+       height: 170vh;
+   }
+   .ninebox{
+       width: 70vw;
+       height: 87vh;
+   }
+   
+   .number{
+      flex-direction: column;
+       justify-content: space-evenly;
+       padding-left: 25px;
+       width: 62vw;
+       height: 22vh;
+   }
+   .num{
+       width: 60vw;
+   }
+   .given{
+       width: 9vw;
+       height: 8vh;
+       line-height: 8vh;
+   }
+   .tel{
+       width: 35vw;
+       height: 8vh;
+       line-height: 8vh;
+   }
+   .numbut{
+    width: 46vw;
+   }
+
+
+
+
+
+
+
+   
+   .ten{
+        background-color: #28328c;
+        height: 350vh;
+        margin: auto;
+    }
+    .innerten{
+        height: 300vh;
+        width: 97vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+       
+    }
+    .it1{
+        width: 54vw;
+        height: 38vh;
+        margin-top: 5px;
+    }
+    #lop{
+        height: 57vh;
+    }
+    .it2{
+        width: 54vw;
+        height: 30vh;
+        margin-top: 5px;
+    }
+    
+    .innerten h4{
+        font-size: 1.5rem;
+    }
+    .innerten li a{
+        font-size: 1rem;
+    }
+    
+    .innerten2{
+        margin-top: 30px;
+        
+    }
+    .innerten3{
+        
+        font-size: 0.9rem;
+        margin-top: 30px;
+       
+    }
+
+    
+}
+    
+</style>
+<body>
+    <div class="one">
+        <div class="oneb1">practo</div>
+        <div class="oneb2">
+            
+                <div><a href="temp3 practo.html">Find Doctors</a></div>
+                <div><a href="temp3 practo.html">Video Consult</a></div>
+                <div><a href="temp3 practo.html">Medicines</a></div>
+                <div><a href="temp3 practo.html">Lab Tests</a></div>
+                <div><a href="temp3 practo.html">Surgeries</a></div>
+                <div class="b">
+                    <label class="ham" for="click">For Corporates  <i class="fa-solid fa-chevron-down"></i></label>
+                    <input type="checkbox" id="click">
+                    <ul class="drop">
+                        <li>Health & Wellness Plans</li>
+                        <li>Group Insurance</li>
+                    </ul>
+                </div>
+                <div class="b">
+                    <label class="ham2" for="click2">For providers <i class="fa-solid fa-chevron-down"></i></label>
+                    <input type="checkbox" id="click2">
+                    <ul class="drop2">
+                        <li>Practo Prime</li>
+                        <li>Software for providers</li>
+                        <li>List your practice for free</li>
+                        <li>ABDM</li>
+                    </ul>
+                </div>
+                <div class="b">
+                    <label class="ham3" for="click3">Security & help   <i class="fa-solid fa-chevron-down"></i></label>
+                    <input type="checkbox" id="click3">
+                    <ul class="drop3">
+                        <li>Data security</li>
+                        <li>Help</li>
+                    </ul>
+                </div>
+
+        </div >
+        <div class="oneb3">
+            <div class="boxb3">Login/Signup</div>
+        </div>
+    </div>
+
+
+    <div class="three">
+        <img src="chronic_consumer_banner_dweb.png" alt="">
+    </div>
+
+
+    <div class="four">
+        <div class="innerfour">
+            <div class="f1"><img class="img1" src="instant_video_consulation.webp" ></div>
+            <div class="t1"><p class="text">Instant Video Consultation</p> <p class="text1">Connect within 60 secs</p></div>
+        </div>
+       <div class="innerfour">
+            <div class="f2"><img class="img2" src="find_doctors.webp" ></div>
+            <div class="t1"><p class="text">Find Doctors Near You</p> <p class="text1">Confirmed appointments</p></div>
+       </div>
+        <div class="innerfour">
+            <div class="f3"><img class="img3" src="medicines.webp"></div>
+            <div class="t1"><p class="text">Medicines</p> <p class="text1">Essentials at your doorstep</p></div>  
+        </div>
+        <div class="innerfour">
+            <div class="f4"><img class="img4" src="lab_tests.png" ></div>
+            <div class="t1"><p class="text">Lab Tests</p> <p class="text1">Sample pickup at your <br>home</p></div>
+        </div>
+        <div class="innerfour">
+            <div class="f5"><img class="img5" src="surgeries.webp"></div>
+            <div class="t1"><p class="text">Surgeries</p> <p class="text1">Safe and trusted surgery centers</p></div>
+        </div>
+    </div>
+    
+
+    <div class="five">
+        
+        <div class="box1">
+            <div><p class="mark1"> Consult top doctors online for any health concern</p>
+                <p class="mark2">Private online consultations with verified doctors in all specialists</p>
+            </div>
+            <div><button class="mark3">View All Specialities</button></div>
+        </div>
+
+        <div class="box2">
+            <div class="card">
+                <div ><img class="cardimg" src="irregular-painful+period.webp"></div>
+                <div><p class="text2">Period doubts or<br> Pregnancy</p><p class="text3">CONSULT NOW</p></div>
+            </div>
+            <div class="card">
+                <div><img class="cardimg" src="Acne.webp"></div>
+                <div><p class="text2">Acne, pimple or<br> skin issues</p><p class="text3">CONSULT NOW</p></div>
+            </div>
+            <div class="card">
+                <div><img class="cardimg" src="Acne.webp"></div>
+                <div><p class="text2">Performance<br> issues in bed</p><p class="text3">CONSULT NOW</p></div>
+            </div>
+            <div class="card">
+                <div><img class="cardimg" src="coughing.webp" ></div>
+                <div><p class="text2">Cold, cough or<br> fever</p><p class="text3">CONSULT NOW</p></div>
+            </div>
+            <div class="card">
+                <div><img class="cardimg" src="coughing.webp" ></div>
+                <div><p class="text2">Child not feeling<br>  well</p><p class="text3">CONSULT NOW</p></div>
+            </div>
+            <div class="card">
+                <div><img class="cardimg" src="12-mental-wellness.webp" ></div>
+                <div><p class="text2">Depression or<br>  anxiety</p><p class="text3">CONSULT NOW</p></div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="six">
+        <div class="sixbox1">
+            <p class="mark4">Book an appointment for an in-clinic consultation</p>
+            <p class="mark5">Find experienced doctors across all specialties</p>
+        </div>
+
+        <div class="sixbox2">
+            <div class="card2">
+                <div><img class="cardimg2" src="sp-dentist@2x.jpg"></div>
+                <div><p class="text4">Dentist</p><p class="text5">Teething troubles? Shedule a dental checkup</p></div>
+            </div>
+            <div class="card2">
+                <div><img  class="cardimg2" src="sp-gynecologist@2x.jpg"></div>
+                <div><p class="text4">Gynecologist/Obstetrician</p><p class="text5">Explore for women’s health, pregnancy and infertility treatments</p></div>
+            </div>
+            <div class="card2">
+                <div><img  class="cardimg2" src="sp-dietitian@2x.jpg"></div>
+                <div><p class="text4">Dietitian/Nutrition</p><p class="text5">Get guidance on eating right, weight management and sports nutrition</p></div>
+            </div>
+            <div class="card2">
+                <div ><img class="cardimg2" src="sp-physiotherapist@2x.jpg"></div>
+                <div><p class="text4">Physiotherapist</p><p class="text5">Pulled a muscle? Get it treated by a trained physiotherapist</p></div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="seven">
+        <div class="seveninside">
+            <div class="seventext">
+                <p class="texts1">Read top articles from health experts</p>
+                <p class="texts2">Health articles that keep you informed about good health practices and achieve your goals.</p>
+                <button class="butt">See all articles</button>
+            </div>
+            <div class="sevenbox">
+                <div ><img class="cardimg3" src="facts.jpeg"></div>
+                <div><p class="text6">Coronavirus</p><p class="text7">12 Coronavirus Myths and Facts That You Should Be Aware Of</p> <p class="text8">Dr. Diana Borgio</p></div>
+            </div>
+            <div class="sevenbox">
+                <div ><img class="cardimg3" src="facts2.jpeg"></div>
+                <div><p class="text6">Vitamins and Supplements</p> <p class="text7">Eating Right to Build Immunity Against Cold and Viral Infections</p> <p class="text8">Dr. Diana Borgio</p></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="outernine">
+        <br><br><br>
+        <div class="nine">
+            <div><img class="nineimg" src="footer-img.webp"></div>
+            <div class="ninebox">
+                <div >
+                    <h2 class="textn1">Download the Practo app</h2>
+                    <p class="textn2">Access video consultation with India’s top doctors on the Practo app. <br>Connect with doctors online, available 24/7, from the comfort of your home.</p>
+                    <h4 class="textn3">Get the link to download the app</h4>
+                </div>
+                <div class="number">
+                    <div class="num">
+                        <div class="given">+91</div>
+                        <input class="tel" type="tel" placeholder="Enter phone number">
+                    </div>
+                    <div class="numbut">
+                        <button class="butt2">Send SMS</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ten">
+        <div class="innerten">
+            
+            <div class="it1">
+                <h4>Practo</h4>
+                <ul>
+                    <li class="inn"><a href="temp3 practo.html">About</a></li>
+                    <li><a href="temp3 practo.html">Blog</a></li>
+                    <li><a href="temp3 practo.html">Careers</a></li>
+                    <li><a href="temp3 practo.html">Press</a></li>
+                    <li><a href="temp3 practo.html">Contact Us</a></li> 
+                </ul>
+            </div>
+        
+            <div class="it1" id="lop">
+                <h4>For patients</h4>
+                <ul>
+                    <li class="inn"><a href="temp3 practo.html">Search for doctors</a></li>
+                    <li><a href="temp3 practo.html">Search for clinics</a></li>
+                    <li><a href="temp3 practo.html">Search for hospitals</a></li>
+                    <li><a href="temp3 practo.html">Book Diagnostic Tests</a></li>
+                    <li><a href="temp3 practo.html">Book Full Body Checkups</a></li>
+                    <li><a href="temp3 practo.html">Practo Plus</a></li>
+                    <li><a href="temp3 practo.html">Covid Hospital listing</a></li>
+                    <li><a href="temp3 practo.html">Practo Care Clinics</a></li>
+                    <li><a href="temp3 practo.html">Read health articles</a></li>
+                    <li><a href="temp3 practo.html">Read about medicines</a></li>
+                    <li><a href="temp3 practo.html">Practo drive</a></li>
+                    <li><a href="temp3 practo.html">Health app</a></li>
+                    <li><a href="temp3 practo.html">Practo Plus Infinity</a></li>
+                </ul>
+            </div>
+           
+            <div class="it1">
+                <div>
+                    <h4> For doctors</h4>
+                    <ul>
+                        <li class="inn"><a href="temp3 practo.html"> Practo Profile</a></li>
+                    </ul>
+                </div>
+                <div class="inn1">
+                    <h4>For clinics</h4>
+                    <ul>
+                        <li class="inn"><a href="temp3 practo.html">Ray by Practo</a></li>
+                        <li><a href="temp3 practo.html">Practo Reach</a></li>
+                        <li><a href="temp3 practo.html">Ray Tab</a></li>
+                        <li><a href="temp3 practo.html">Practo Pro</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="it1">
+                <div >
+                    <h4>For hospitals</h4>
+                    <ul>
+                        <li class="inn"><a href="temp3 practo.html">Insta by Practo</a></li>
+                        <li><a href="temp3 practo.html"> Qikwell by Practo</a></li>
+                        <li><a href="temp3 practo.html"> Practo Profile</a></li>
+                        <li><a href="temp3 practo.html">Practo Reach</a></li>
+                        <li><a href="temp3 practo.html">Practo Drive</a></li>
+                    </ul>
+                </div>
+                <div class="inn1">
+                    <h4>For Corporates</h4>
+                    <ul>
+                        <li class="inn"><a href="temp3 practo.html">Wellness Plans</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="it1">
+                <h4>More</h4>
+                <ul>
+                    <li class="inn"><a href="temp3 practo.html">Help</a></li>
+                    <li><a href="temp3 practo.html">Developers</a></li>
+                    <li><a href="temp3 practo.html">Privacy Policy</a></li>
+                    <li><a href="temp3 practo.html">Terms & Conditions</a></li>
+                    <li><a href="temp3 practo.html">PCS T&C</a></li>
+                    <li><a href="temp3 practo.html">Healthcare Directory</a></li>
+                    <li><a href="temp3 practo.html">Practo Health Wiki</a></li>
+                </ul>
+            </div>
+
+            <div class="it2">
+                <h4>Social</h4>
+                <ul>
+                    <li class="inn"><a href="temp3 practo.html">Facebook</a></li>
+                    <li><a href="temp3 practo.html">Twitter</a></li>
+                    <li><a href="temp3 practo.html">LinkedIn</a></li>
+                    <li><a href="temp3 practo.html">Youtube</a></li>
+                    <li><a href="temp3 practo.html">Github</a></li>
+                </ul>
+            </div>
+
+        </div>
+        
+        <div class="innerten2">
+            <img  src="//www.practostatic.com/web-assets/images/white_practo_logo.svg"> 
+            
+        </div>
+        <div class="innerten3">
+            Copyright © 2017, Practo. All rights reserved.
+        </div>
+
+    </div>
+</body>
+</html>
+
